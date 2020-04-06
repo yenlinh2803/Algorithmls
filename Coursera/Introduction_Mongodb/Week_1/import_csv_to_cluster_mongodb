@@ -1,0 +1,8 @@
+
+Template: Import data to cluster in mongodb
+mongoimport --type csv --headerline --db mflix --collection movies_initial --host "<CLUSTER>/<SEED_LIST>" --authenticationDatabase admin --ssl --username analytics --password analytics-password --file movies_initial.csv
+
+
+mongoimport --type csv --headerline --db mflix --collection movies_initial --host "mflix-shard-0/mflix-shard-00-00-vfdsr.mongodb.net:27017,mflix-shard-00-01-vfdsr.mongodb.net:27017,mflix-shard-00-02-vfdsr.mongodb.net:27017" --authenticationDatabase admin --ssl --username analytics --password analytics-password --file movies_initial.csv
+
+
